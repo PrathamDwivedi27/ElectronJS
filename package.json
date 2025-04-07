@@ -1,0 +1,24 @@
+{
+  "name": "electron_basiccs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+  "build:css": "npx tailwindcss -i ./renderer/styles.css -o ./renderer/styles.css",
+  "watch:css": "npx tailwindcss -i ./renderer/styles.css -o ./renderer/styles.css --watch",
+  "start": "electron .",
+  "dev": "concurrently \"npm:watch:css\" \"npm:start\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^35.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}
